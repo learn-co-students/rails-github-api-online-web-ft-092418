@@ -1,6 +1,13 @@
 <div class = "container">
+  <h1><%= session[:username]%></h1>
   <h1>Repos</h1>
-  <!-- List repositories and display username here! -->
+
+  <p>
+    <%= @results.each do |result|%>
+      <%= result["name"]%>
+    <%end%>
+  </p>
+
 
   <%= form_tag("/repositories/create", method: "post") do %>
     <%= label_tag(:name, "Create a New Repo:") %>
