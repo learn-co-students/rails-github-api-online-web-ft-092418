@@ -6,7 +6,7 @@ class RepositoriesController < ApplicationController
     Authorization: "token #{session[:token]}"
   }
   @results = JSON.parse(response.body)
-  #binding.pry
+   #binding.pry
   end
 
 end
