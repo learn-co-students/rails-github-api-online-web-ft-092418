@@ -1,10 +1,10 @@
 <div class = "container">
   <h1>Repos</h1>
-  <h2>Login: <%= @user["login"] %></h2>
+  <h2>Login: <%= @user['login'] %></h2>
   <h3>My Repositories</h3>
   <ul>
     <% @repos.each do |r| %>
-      <li><%= r['name'] %></li>
+      <li><%= r %></li>
     <% end %>
   </ul>
   <!-- List repositories and display username here! -->
