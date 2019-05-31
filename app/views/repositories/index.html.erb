@@ -8,3 +8,16 @@
     <%= submit_tag("Create") %>
   <% end %>
 </div>
+
+<% if @repos[0] %>
+  <h2>Current User: <%= @repos[0]['owner']['login'] %></h2>
+
+  <ul>
+  <% @repos.each do |repo| %>
+
+  <li>
+  <a href="<%= repo['html_url']%>"><%= repo['name'] %></a>
+  </li>
+  <% end %>
+  </ul>
+<% end %>
